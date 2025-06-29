@@ -1,0 +1,41 @@
+spring:
+  application:
+    name: screenmatch
+  profiles:
+    active: dev
+
+# Configurações da API OMDB
+omdb:
+  api:
+    base-url: http://www.omdbapi.com/
+    key: ${OMDB_API_KEY:your-api-key-here}
+    timeout: 30s
+
+# Configurações de logging
+logging:
+  level:
+    com.screenmatch: DEBUG
+    org.springframework.web: INFO
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+  file:
+    name: logs/screenmatch.log
+
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+omdb:
+  api:
+    key: "your-dev-api-key"
+
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+omdb:
+  api:
+    key: ${OMDB_API_KEY}
