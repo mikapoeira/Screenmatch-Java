@@ -33,7 +33,7 @@ O **ScreenMatch** é uma aplicação console desenvolvida em Java com Spring Boo
 
 ## 📁 Estrutura do Projeto
 
-\`\`\`
+```text
 src/
 ├── main/
 │   ├── java/com/screenmatch/
@@ -57,7 +57,7 @@ src/
 ├── logs/                                  # Arquivos de log
 ├── pom.xml                               # Configurações Maven
 └── README.md                             # Este arquivo
-\`\`\`
+```
 
 ## ⚙️ Configuração e Instalação
 
@@ -70,40 +70,40 @@ src/
 ### 🔧 Instalação
 
 1. **Clone o repositório**
-   \`\`\`bash
+   ```bash
    git clone https://github.com/mikapoeira/Spring-sem-web.git
    cd Spring-sem-web
-   \`\`\`
+   ```
 
 2. **Configure a chave da API**
    
    Edite o arquivo \`src/main/resources/application.yml\`:
-   \`\`\`yaml
+   ```yaml
    omdb:
      api:
        key: "SUA_CHAVE_API_AQUI"
-   \`\`\`
+   ```
    
    Ou defina como variável de ambiente:
-   \`\`\`bash
+   ```bash
    export OMDB_API_KEY=sua_chave_api_aqui
-   \`\`\`
+   ```
 
 3. **Compile o projeto**
-   \`\`\`bash
+   ```bash
    mvn clean compile
-   \`\`\`
+   ```
 
 4. **Execute a aplicação**
-   \`\`\`bash
+   ```bash
    mvn spring-boot:run
-   \`\`\`
+   ```
 
 ## 🎯 Como Usar
 
 Ao executar a aplicação, você verá o menu principal:
 
-\`\`\`
+```
 ==================================================
 🎬 SCREENMATCH 2.0 - Menu Principal
 ==================================================
@@ -112,7 +112,7 @@ Ao executar a aplicação, você verá o menu principal:
 3 - Buscar série por ID IMDB
 0 - Sair
 ==================================================
-\`\`\`
+```
 
 ### Exemplos de Uso
 
@@ -130,7 +130,7 @@ Ao executar a aplicação, você verá o menu principal:
 
 ## 📊 Exemplo de Saída
 
-\`\`\`
+```
 ================================================================================
 📺 DETALHES DA SÉRIE
 ================================================================================
@@ -150,7 +150,7 @@ Ao executar a aplicação, você verá o menu principal:
 📖 Sinopse: A chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine with a former student in order to secure his family's future.
 🆔 IMDB ID: tt0903747
 ================================================================================
-\`\`\`
+```
 
 ## 🔧 Configurações Avançadas
 
@@ -165,31 +165,31 @@ A aplicação suporta diferentes profiles:
 
 Ajuste o timeout das requisições no \`application.yml\`:
 
-\`\`\`yaml
+```yaml
 omdb:
   api:
     timeout: 30s  # Timeout personalizado
-\`\`\`
+```
 
 ### Configurações de Log
 
 Os logs são salvos em \`logs/screenmatch.log\` e podem ser configurados:
 
-\`\`\`yaml
+```yaml
 logging:
   level:
     com.screenmatch: DEBUG  # Nível de log para a aplicação
   file:
     name: logs/screenmatch.log
-\`\`\`
+```
 
 ## 🧪 Testes
 
 Execute os testes unitários:
 
-\`\`\`bash
+```bash
 mvn test
-\`\`\`
+```
 
 ## 🤝 Contribuindo
 
@@ -241,10 +241,10 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 ---
 
-**Desenvolvido com ❤️ por [mikapoeira](https://github.com/mikapoeira)**
+**Desenvolvido com ❤️ por [mikael](https://github.com/mikapoeira)**
 
 ⭐ Se este projeto te ajudou, considere dar uma estrela no repositório!
-\`\`\`
+```
 
 ## 🔗 Links Úteis
 
@@ -252,4 +252,4 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 - [OMDB API Documentation](http://www.omdbapi.com/)
 - [Java 17 Documentation](https://docs.oracle.com/en/java/javase/17/)
 - [Maven Documentation](https://maven.apache.org/guides/)
-\`\`\`
+```
